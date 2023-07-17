@@ -1,5 +1,5 @@
 package keywordDrivenFramework;
-
+import java.util.Scanner;
 import java.io.IOException;
 import java.time.Duration;
 import org.openqa.selenium.WebDriver;
@@ -13,10 +13,11 @@ public class BaseTest extends Flib implements IautoConstant {
 	public void openBrowser() throws IOException {
 
 		Flib flib = new Flib();
-
-		String browservalue = flib.readPropertyData(PROP_PATH, "Browser");
+		Scanner sc=new Scanner(System.in);
+		System.out.println("Enter Brosername: ");
+		String browservalue = sc.next();
 		String url = flib.readPropertyData(PROP_PATH, "Url");
-	
+			
 		if (browservalue.equalsIgnoreCase("chrome")) {
 
 			System.setProperty(CHROME_KEY, CHROME_PATH);
@@ -50,7 +51,8 @@ public class BaseTest extends Flib implements IautoConstant {
 		}
 	}
 
-	public void closeBrowser() {
+	public void closeBrowser() throws InterruptedException {
+		Thread.sleep(2000);
 		driver.quit();
 	}
 
