@@ -15,7 +15,7 @@ public class BaseTest extends Flib implements IautoConstant {
 		Flib flib = new Flib();
 		String browserValue = flib.readPropertyData(PROP_PATH,"Browser");
 		String url = flib.readPropertyData(PROP_PATH,"Url");
-
+		
 		if(browserValue.equalsIgnoreCase("chrome"))
 		{
 			System.setProperty(CHROME_KEY, CHROME_PATH);
@@ -47,7 +47,7 @@ public class BaseTest extends Flib implements IautoConstant {
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 		driver.get(url);
 	}
-
+	
 	public void tearDown()
 	{
 		driver.quit();

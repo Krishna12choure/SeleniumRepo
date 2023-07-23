@@ -1,8 +1,10 @@
 package pom;
 
+import java.io.IOException;
+
 public class InvalidLoginTestCase extends BaseTest {
 	
-	public static void main(String[] args) throws IOException, EncryptedDocumentException, InterruptedException {
+	public static void main(String[] args) throws InterruptedException, IOException {
 		// launch the browsers & application
 		BaseTest bt = new BaseTest();
 		bt.setUp();

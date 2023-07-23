@@ -44,4 +44,10 @@ public class Loginpage {
 		passTB.sendKeys(ValidPassword);
 
 	}
+	
+	public void inValidLoginMethod(String InvalidUsn, String InValidPwd)
+	{
+		usnTB.sendKeys(InvalidUsn);
+		passTB.sendKeys(InValidPwd);
+	}
 }
