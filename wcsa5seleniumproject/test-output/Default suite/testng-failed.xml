@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="annotation.GoogleSerchTestCase">
+      <class name="testNGPackage.TestCase">
         <methods>
           <include name="tearDown"/>
+          <include name="loginMethod"/>
           <include name="setUp"/>
-          <include name="serach3"/>
         </methods>
-      </class> <!-- annotation.GoogleSerchTestCase -->
+      </class> <!-- testNGPackage.TestCase -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
